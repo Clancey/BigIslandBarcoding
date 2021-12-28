@@ -3,9 +3,10 @@
 	<PropertyGroup>
 		<!-- iOS, Android, MacCatalyst -->
 		<TargetFrameworks>net6.0-android;net6.0-ios;net6.0-maccatalyst</TargetFrameworks>
-		<OutputType>Exe</OutputType>
+		<OutputType>Library</OutputType>
 		<SingleProject>true</SingleProject>
 		<UseMaui>true</UseMaui>
+		<LangVersion>latest</LangVersion>
 
 		<!-- Display name -->
 		<ApplicationTitle>BigIslandBarcode</ApplicationTitle>

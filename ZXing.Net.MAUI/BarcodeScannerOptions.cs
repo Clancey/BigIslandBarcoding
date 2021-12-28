@@ -3,12 +3,12 @@
 	public record BarcodeReaderOptions
 
 	{
-		public bool AutoRotate { get; init; }
-		public bool TryHarder { get; init; }
+		public bool AutoRotate { get; set; }
+		public bool TryHarder { get; set; }
 
-		public BarcodeFormat Formats { get; init; }
+		public BarcodeFormat Formats { get; set; }
 
-		public bool Multiple { get; init; }
+		public bool Multiple { get; set; }
 
 	}
 }

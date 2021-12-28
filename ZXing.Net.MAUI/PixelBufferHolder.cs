@@ -4,7 +4,7 @@ namespace ZXing.Net.Maui.Readers
 {
 	public record PixelBufferHolder
 	{
-		public Size Size { get; init; }
+		public Size Size { get; set; }
 
 		public
 
@@ -16,6 +16,6 @@ namespace ZXing.Net.Maui.Readers
 		byte[]
 #endif
 
-		Data { get; init; }
+		Data { get; set; }
 	}
 }

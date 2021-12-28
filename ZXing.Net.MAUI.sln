@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31606.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZXing.Net.MAUI", "ZXing.Net.MAUI\ZXing.Net.MAUI.csproj", "{E4D3C7DE-CE07-444E-ADB8-31691A19406F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZXing.Net.MAUI", "ZXing.Net.MAUI\ZXing.Net.MAUI.csproj", "{E4D3C7DE-CE07-444E-ADB8-31691A19406F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigIslandBarcode", "BigIslandBarcode\BigIslandBarcode.csproj", "{D3EBA600-16E4-4C91-A9E9-CC600FA2B481}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigIslandBarcode", "BigIslandBarcode\BigIslandBarcode.csproj", "{D3EBA600-16E4-4C91-A9E9-CC600FA2B481}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZXing.Net.MAUI.Controls", "ZXing.Net.MAUI.Controls\ZXing.Net.MAUI.Controls.csproj", "{C2B6860E-E2C6-4C6C-B214-AD0529E49844}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZXing.Net.MAUI.Comet", "ZXing.Net.MAUI.Comet\ZXing.Net.MAUI.Comet.csproj", "{D446365F-3149-4258-8D2D-1D2003BAFB7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZXing.Net.MAUI.Legacy", "ZXing.Net.MAUI\ZXing.Net.MAUI.Legacy.csproj", "{A4547716-E6E4-48E4-9301-B2F2F0E6022D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,6 +36,10 @@ Global
 		{D446365F-3149-4258-8D2D-1D2003BAFB7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D446365F-3149-4258-8D2D-1D2003BAFB7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D446365F-3149-4258-8D2D-1D2003BAFB7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4547716-E6E4-48E4-9301-B2F2F0E6022D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4547716-E6E4-48E4-9301-B2F2F0E6022D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4547716-E6E4-48E4-9301-B2F2F0E6022D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4547716-E6E4-48E4-9301-B2F2F0E6022D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

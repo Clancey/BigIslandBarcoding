@@ -10,14 +10,14 @@ namespace ZXing.Net.Maui
 {
 	public record BarcodeResult
 	{
-		public byte[] Raw { get; init; }
+		public byte[] Raw { get; set; }
 
-		public string Value { get; init; }
+		public string Value { get; set; }
 
-		public BarcodeFormat Format { get; init; }
+		public BarcodeFormat Format { get; set; }
 
-		public IReadOnlyDictionary<MetadataType, object> Metadata { get; init; }
+		public IReadOnlyDictionary<MetadataType, object> Metadata { get; set; }
 
-		public PointF[] PointsOfInterest { get; init; }
+		public PointF[] PointsOfInterest { get; set; }
 	}
 }

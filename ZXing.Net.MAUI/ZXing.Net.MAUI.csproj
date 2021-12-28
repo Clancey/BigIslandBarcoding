@@ -1,11 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFrameworks>net6.0;net6.0-android;net6.0-maccatalyst;net6.0-ios</TargetFrameworks>
+		<TargetFrameworks>netstandard2.1;Xamarin.iOS10;net6.0;net6.0-android;net6.0-maccatalyst;net6.0-ios</TargetFrameworks>
 		<PackageId>ZXing.Net.Maui</PackageId>
 		<Title>ZXing.Net.MAUI Barcode Scanner for .NET MAUI</Title>
 		<Authors>Redth</Authors>
-		<UseMaui>True</UseMaui>
-		<UseMauiEssentials>True</UseMauiEssentials>
 		<SingleProject>True</SingleProject>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<UseSystemResourceKeys>false</UseSystemResourceKeys>
@@ -17,6 +15,7 @@
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<DebugType>portable</DebugType>
 		<OutputType>Library</OutputType>
+		<LangVersion>latest</LangVersion>
 		
 	</PropertyGroup>
 	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0-android'">
@@ -32,7 +31,18 @@
 	<PropertyGroup Condition="'$(TargetFramework)' == 'net6.0-maccatalyst'">
 		<DefineConstants>MACCATALYST</DefineConstants>
 	</PropertyGroup>
+	<PropertyGroup>
+	  <LangVersion>latest</LangVersion>
+	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="ZXing.Net" Version="0.16.6" />
 	</ItemGroup>
+	
+	<ItemGroup Condition="$(TargetFramework.StartsWith('net6')) != true">
+		<PackageReference Include="Clancey.Comet" Version="0.3.429-beta" />
+	</ItemGroup>
+	<PropertyGroup Condition="$(TargetFramework.StartsWith('net6'))">
+		<UseMaui>True</UseMaui>
+		<UseMauiEssentials>True</UseMauiEssentials>
+	</PropertyGroup>
 </Project>

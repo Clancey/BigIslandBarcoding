@@ -1,10 +1,10 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFrameworks>net6.0;</TargetFrameworks>
+		<TargetFrameworks>netstandard2.1;net6.0;</TargetFrameworks>
 		<PackageId>ZXing.Net.Maui.Comet</PackageId>
 		<Title>ZXing.Net.MAUI Barcode Scanner for .NET MAUI</Title>
 		<Authors>Redth</Authors>
-		<UseMaui>True</UseMaui>
 		<SingleProject>True</SingleProject>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<UseSystemResourceKeys>false</UseSystemResourceKeys>
@@ -17,11 +17,18 @@
 		<DebugType>portable</DebugType>
 		<OutputType>Library</OutputType>
 	</PropertyGroup>
+	<PropertyGroup>
+		<LangVersion>latest</LangVersion>
+	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="ZXing.Net" Version="0.16.6" />
-		<PackageReference Include="Clancey.Comet" Version="0.3.428-beta" />
+		<PackageReference Include="Clancey.Comet" Version="0.3.429-beta" />
 	</ItemGroup>
 	<ItemGroup>
-	  <ProjectReference Include="..\ZXing.Net.MAUI\ZXing.Net.MAUI.csproj" />
+		<ProjectReference Include="..\ZXing.Net.MAUI\ZXing.Net.MAUI.csproj" />
 	</ItemGroup>
+	<PropertyGroup Condition="$(TargetFramework.StartsWith('net6'))">
+		<UseMaui>True</UseMaui>
+		<UseMauiEssentials>True</UseMauiEssentials>
+	</PropertyGroup>
 </Project>

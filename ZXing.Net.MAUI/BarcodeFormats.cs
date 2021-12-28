@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ZXing.Net.Maui
 {
@@ -9,7 +10,7 @@ namespace ZXing.Net.Maui
 		{
 			var items = new List<ZXing.BarcodeFormat>();
 
-			foreach (var enumValue in Enum.GetValues<BarcodeFormat>())
+			foreach (var enumValue in Enum.GetValues(typeof(BarcodeFormat)).OfType<BarcodeFormat>())
 			{
 				if (formats.HasFlag(enumValue))
 					items.Add((ZXing.BarcodeFormat)enumValue);
